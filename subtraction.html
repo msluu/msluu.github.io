@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Addition</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styling.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styling.css" />
     <script src="main.js"></script>
-</head>
-<body onload="createCalculation()">
+  </head>
+  <body onload="createCalculation()">
     <main class="pageWrapper">
-        <h1 class="headerPage">SUBTRAKTION</h1>
-        <a href="Index.html" ><button class="homepage" type="button">Startsidan</button></a>
-        <section class="numbersWrapper">
-            <div class="firstNumber numbers"></div>
-            <span class="operators">-</span>
-            <div class="secondNumber numbers"></div>
-            <span class="operators">=</span>
-            <input class="answer numbers" type="number">
-        </section>
-        <section class="fruitWrapper">
-            <div class="firstPineapple"></div>
-            <div class="firstCherry"></div>
-            <div class="buttons">
-                <button class="submitButton" onclick="calculate()">Rätta</button>
-                <button class="refreshButton" type="submit" onClick="refreshPage()">Nya tal</button>
-            </div>
-        </section>
-                <script src="subtraction.js"></script>
+      <h1 class="headerPage">SUBTRAKTION</h1>
+      <a href="index.html"
+        ><button class="homepage" type="button">Startsidan</button></a
+      >
+      <section class="numbersWrapper">
+        <div class="firstNumber numbers"></div>
+        <span class="operators">-</span>
+        <div class="secondNumber numbers"></div>
+        <span class="operators">=</span>
+        <input class="answer numbers" type="number" />
+      </section>
+      <section class="fruitWrapper">
+        <div class="firstPineapple"></div>
+        <div class="firstCherry"></div>
+        <div class="buttons">
+          <button class="submitButton" onclick="calculate()">Rätta</button>
+          <button class="refreshButton" type="submit" onClick="refreshPage()">
+            Nya tal
+          </button>
+        </div>
+      </section>
+      <script src="subtraction.js"></script>
     </main>
-</body>
+  </body>
 </html>
