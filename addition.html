@@ -10,7 +10,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" media="screen" href="styling.css" />
-    <script src="main.js"></script>
   </head>
   <body onload="createCalculation()">
     <main class="pageWrapper">
@@ -38,7 +37,16 @@
     </main>
     <div class="popUpWrapper">
       <div class="popUp">
-        <span class="popUpText">RÄTT!!</span>
+        <span class="popUpText"></span>
+        <img class="correctImg" src="images/correct.png" />
+      </div>
+      <div class="popUpWrong">
+        <span class="popUpTextWrong"></span>
+        <img class="wrongImg" src="images/wrong.png" />
+      </div>
+      <div class="buttonWrapper">
+        <button class="tryAgainBtn">Försök igen</button>
+        <button class="nextBtn">Nästa tal</button>
       </div>
     </div>
     <script src="addition.js"></script>

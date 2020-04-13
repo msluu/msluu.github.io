@@ -1,6 +1,21 @@
-const closeButtonElement = document.querySelector(".popUpWrapper");
-const rightNum = document.querySelector(".popUpWrapper");
+const closeButtonElement = document.querySelector(".nextBtn");
+const tryAgain = document.querySelector(".tryAgainBtn");
+const popUpWrapper = document.querySelector(".popUpWrapper");
+const popUpText = popUpWrapper.querySelector(".popUpText");
+const popUp = document.querySelector(".popUp");
+const nextBtn = document.querySelector(".nextBtn");
+const tryAgainBtn = document.querySelector(".tryAgainBtn");
+
+const popUpWrong = document.querySelector(".popUpWrong");
+const popUpTextWrong = popUpWrong.querySelector(".popUpTextWrong");
+
 closeButtonElement.addEventListener("click", refreshPage);
+tryAgain.addEventListener("click", closePopUp);
+
+function closePopUp() {
+  popUpWrapper.classList.remove("show");
+  tryAgainBtn.classList.remove("show");
+}
 
 function refreshPage() {
   window.location.reload();
@@ -47,9 +62,14 @@ function calculate() {
   const secondNumber = document.querySelector(".secondNumber").innerHTML;
   const answer = document.querySelector(".answer").value;
   const rightAnswer = +firstNumber + +secondNumber;
+  popUpWrapper.classList.toggle("show");
+  nextBtn.classList.toggle("show");
   if (rightAnswer === +answer) {
-    rightNum.classList.toggle("show");
+    popUpWrong.classList.toggle("hide");
+    popUpText.innerText = "RÄTT!";
   } else {
-    alert(" Fel! Testa igen.");
+    popUp.classList.toggle("hide");
+    popUpTextWrong.innerText = "FEL!";
+    tryAgainBtn.classList.toggle("show");
   }
 }
